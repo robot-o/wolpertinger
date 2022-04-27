@@ -1,0 +1,128 @@
+points:
+  key:
+    padding: cy
+    footprints:
+      choc_hotswap:
+        type: choc
+        nets:
+          from: '=column_net'
+          to: GND
+        params:
+          keycaps: true
+          reverse: true
+          hotswap: true
+  zones:
+    matrix:
+      anchor:
+        rotate: -15
+      columns:
+        1:
+          spread: 21
+          stagger: 0
+          key:
+            column_net: P4
+        2:
+          spread: 21
+          stagger: 0
+          key:
+            column_net: P5
+        3:
+          spread: 21
+          stagger: 2.5
+          key:
+            column_net: P6
+        4:
+          spread: 21
+          stagger: 2.5
+          key:
+            column_net: P7
+        5:
+          spread: 21
+          stagger: -2.5
+          key:
+            column_net: P8
+          rows:
+            1:
+              shift: [10,-5]
+              rotate: -8
+        6:
+          spread: 21
+          stagger: -2.5
+          key:
+            column_net: P9
+          rows:
+            1:
+              skip: true
+        7:
+          spread: 21
+          stagger: -10
+          key:
+            column_net: P10
+          rows:
+            1:
+              skip: true
+            2:
+              skip: true
+            3:
+              skip: true
+      rows:
+        6:
+          padding: 21
+        5:
+          padding: 21
+        4:
+          padding: 21
+        3:
+          padding: 21
+        2:
+          padding: 21
+        1:
+          padding: 21
+          shift: [0,0]
+    thumbcluster:
+      anchor:
+        ref: matrix_5_1
+        shift: [30,5]
+        rotate: -9
+      columns:
+        near:
+          key:
+            column_net: P10
+        far:
+          key:
+            column_net: P10
+          spread: 21
+          rotate: 0
+          origin: [0, 0]
+      rows:
+        upper:
+        thumb:
+          shift: [0,6]
+  rotate: 0
+  mirror:
+    ref: matrix_2_4
+    distance: 260
+
+outlines:
+  exports:
+    raw:
+      - type: keys
+        side: left
+        size: [1cx,1cx]
+    cutout:
+      - type: outline
+        name: raw
+        fillet: 3
+    keycap_outlines:
+      - type: keys
+        side: left
+        size: [1cx - 0.5, 1cy - 0.5]
+        bound: false
+
+pcbs:
+  main:
+    outlines:
+      main:
+        outline: cutout
+
+
