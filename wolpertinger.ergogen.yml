@@ -1,16 +1,34 @@
+units:
+  kx: cx
+  ky: cy
+  px: 2
+  py: 2
+
 points:
   key:
-    padding: cy
     footprints:
       choc_hotswap:
         type: choc
-        nets:
-          from: '=column_net'
-          to: GND
         params:
-          keycaps: true
-          reverse: true
           hotswap: true
+          reverse: true
+          keycaps: true
+        nets:
+          # from: P1
+          # to: P2
+          from: =colrow
+          to: =column_net
+
+      diode:
+        type: diode
+        nets:
+          # from: P3
+          # to: P4
+          from: =colrow
+          to: =row_net
+        anchor:
+          shift: [0, -5]
+
   zones:
     matrix:
       anchor:
