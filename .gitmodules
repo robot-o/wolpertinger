@@ -1,3 +1,6 @@
 [submodule "ergogen"]
 	path = ergogen
 	url = https://github.com/ergogen/ergogen
+[submodule "ergogen-gui"]
+	path = ergogen-gui
+	url = git@github.com:MvEerd/ergogen-gui.git
